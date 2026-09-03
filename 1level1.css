@@ -1,0 +1,888 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #FFF8F0;
+
+    color: #4B3F55;
+
+    min-height: 100dvh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACK / HOME
+========================= */
+
+.home-button,
+.back-button {
+
+    position: fixed;
+
+    top: clamp(12px, 2vh, 22px);
+
+    width: clamp(60px, 7vw, 100px);
+
+    min-height: clamp(32px, 4vw, 46px);
+
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: clamp(8px, 1vw, 12px);
+
+    background-color: #D8CCF0;
+
+    color: #4B3F55;
+
+    font-size: clamp(10px, 1.2vw, 15px);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    transition: transform 0.2s ease;
+}
+
+.home-button {
+    right: clamp(10px, 2vw, 30px);
+}
+
+.back-button {
+    left: clamp(10px, 2vw, 30px);
+}
+
+.home-button:hover,
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.game-header {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        clamp(65px, 8vh, 85px)
+        clamp(20px, 5vw, 70px)
+        10px;
+
+    font-weight: bold;
+}
+
+.game-title {
+
+    font-size: clamp(13px, 1.7vw, 22px);
+
+    letter-spacing: 1px;
+}
+
+.level-title {
+
+    font-size: clamp(17px, 2.3vw, 30px);
+
+    letter-spacing: 1px;
+}
+
+.score-title {
+
+    font-size: clamp(13px, 1.7vw, 22px);
+}
+
+
+/* =========================
+   MAIN GAME
+========================= */
+
+.game-container {
+
+    width: 100%;
+
+    min-height: calc(100dvh - 120px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        10px
+        20px
+        40px;
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-section {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.question-potion {
+
+    width: clamp(55px, 8vw, 90px);
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 8px;
+}
+
+.question-box {
+
+    width: min(90vw, 700px);
+
+    padding: 10px 20px 15px;
+}
+
+.witch-title {
+
+    font-size: clamp(13px, 1.6vw, 19px);
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+#question {
+
+    font-size: clamp(21px, 3vw, 38px);
+
+    line-height: 1.25;
+
+    font-weight: bold;
+
+    min-height: 48px;
+}
+
+
+/* =========================
+   POTION GAME
+========================= */
+
+.potion-game {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   POTION AREA
+========================= */
+
+.potion-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   BOTTLE
+========================= */
+
+.bottle {
+    position: relative;
+
+    width: clamp(120px, 16vw, 170px);
+    height: clamp(230px, 30vw, 300px);
+
+    border: 4px solid #4B3F55;
+
+    border-radius:
+        20px
+        20px
+        35px
+        35px;
+
+    background-color: #FFFFFF;
+
+    overflow: hidden;
+
+    margin-top: 5px;
+}
+
+
+/* Bottle neck */
+
+.bottle::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 45px;
+
+    height: 35px;
+
+    border: 4px solid #4B3F55;
+
+    border-bottom: none;
+
+    border-radius: 8px 8px 0 0;
+
+    background-color: #FFFFFF;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   LIQUID
+========================= */
+
+.liquid {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 0%;
+
+    background-color: #E8A4C4;
+
+    transition:
+        height 0.35s ease;
+
+    z-index: 1;
+}
+
+
+/* little wave */
+
+.liquid::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -6px;
+
+    left: -5%;
+
+    width: 110%;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: #E8A4C4;
+}
+
+
+/* =========================
+   BOTTLE SCALE
+========================= */
+
+.bottle-mark {
+    position: absolute;
+
+    right: 7px;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    color: #6D6175;
+
+    z-index: 3;
+}
+
+.mark-100 {
+    top: 4%;
+}
+
+.mark-75 {
+    top: 25%;
+}
+
+.mark-50 {
+    top: 48%;
+}
+
+.mark-25 {
+    top: 72%;
+}
+
+.mark-0 {
+    bottom: 4%;
+}
+
+
+/* =========================
+   CURRENT VALUE
+========================= */
+
+.current-value {
+
+    margin-top: 12px;
+
+    font-size: clamp(24px, 3vw, 34px);
+
+    font-weight: bold;
+}
+
+#unit {
+
+    font-size: clamp(14px, 1.5vw, 18px);
+
+    font-weight: normal;
+}
+
+.target-text {
+
+    margin-top: 3px;
+
+    font-size: clamp(12px, 1.4vw, 16px);
+
+    color: #75697D;
+}
+
+
+/* =========================
+   ADD BUTTONS
+========================= */
+
+.add-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: clamp(7px, 1vw, 12px);
+
+    margin-top: 18px;
+}
+
+.add-button {
+
+    width: clamp(55px, 7vw, 85px);
+
+    min-height: clamp(40px, 5vw, 50px);
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #D8CCF0;
+
+    color: #4B3F55;
+
+    font-size: clamp(13px, 1.5vw, 18px);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.add-button:hover {
+
+    transform: scale(1.05);
+}
+
+.add-button:active {
+
+    transform: scale(0.95);
+}
+
+.add-button:disabled {
+
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================
+   CONTROL BUTTONS
+========================= */
+
+.control-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 14px;
+}
+
+.reset-button,
+.check-button {
+
+    min-width: clamp(100px, 12vw, 145px);
+
+    min-height: clamp(42px, 5vw, 52px);
+
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: #4B3F55;
+
+    font-size: clamp(13px, 1.5vw, 17px);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.reset-button {
+
+    background-color: #E8DDEB;
+}
+
+.check-button {
+
+    background-color: #D8CCF0;
+}
+
+.reset-button:hover,
+.check-button:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    min-height: 25px;
+
+    margin-top: 8px;
+
+    font-size: clamp(13px, 1.5vw, 17px);
+
+    font-weight: bold;
+}
+
+.message.correct {
+
+    color: #6B9B72;
+}
+
+.message.wrong {
+
+    color: #B56B78;
+}
+
+
+/* =========================
+   WRONG ANIMATION
+========================= */
+
+.bottle.wrong {
+
+    animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================
+   COMPLETE POPUP
+========================= */
+
+.complete-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: rgba(75, 63, 85, 0.35);
+
+    z-index: 200;
+}
+
+.complete-box {
+
+    width: min(85vw, 430px);
+
+    padding: 30px 25px;
+
+    background-color: #FFF8F0;
+
+    border: 3px solid #D8CCF0;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(75, 63, 85, 0.15);
+}
+
+.complete-box h2 {
+
+    font-size: clamp(24px, 4vw, 36px);
+
+    margin-bottom: 10px;
+}
+
+.complete-box p {
+
+    font-size: clamp(14px, 2vw, 18px);
+
+    margin-bottom: 12px;
+}
+
+.final-score {
+
+    font-size: clamp(17px, 2.5vw, 22px);
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   COMPLETE BUTTONS
+========================= */
+
+.complete-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.again-button,
+.continue-button {
+
+    min-width: clamp(105px, 13vw, 160px);
+
+    min-height: clamp(42px, 5vw, 55px);
+
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #D8CCF0;
+
+    color: #4B3F55;
+
+    font-size: clamp(13px, 1.5vw, 18px);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.again-button:hover,
+.continue-button:hover {
+
+    transform: scale(1.05);
+}
+
+.again-button:active,
+.continue-button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .game-header {
+
+        padding-top: 60px;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+    .game-container {
+
+        padding-top: 5px;
+    }
+
+    .question-potion {
+
+        width: 60px;
+    }
+
+    .question-box {
+
+        padding-top: 5px;
+    }
+
+    .bottle {
+
+        width: 125px;
+
+        height: 230px;
+    }
+
+    .add-buttons {
+
+        max-width: 300px;
+
+        margin-top: 15px;
+    }
+
+    .add-button {
+
+        width: 60px;
+
+        min-height: 42px;
+    }
+
+    .complete-buttons {
+
+        gap: 8px;
+    }
+
+    .again-button,
+    .continue-button {
+
+        min-width: 105px;
+
+        min-height: 42px;
+
+        font-size: 13px;
+
+        padding: 8px 10px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 389px) {
+
+    .game-header {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+    .game-title,
+    .score-title {
+
+        font-size: 11px;
+    }
+
+    .level-title {
+
+        font-size: 16px;
+    }
+
+    #question {
+
+        font-size: 19px;
+    }
+
+    .bottle {
+
+        width: 115px;
+
+        height: 215px;
+    }
+
+    .add-button {
+
+        width: 55px;
+
+        min-height: 40px;
+
+        font-size: 12px;
+    }
+
+    .complete-buttons {
+
+        gap: 6px;
+    }
+
+    .again-button,
+    .continue-button {
+
+        min-width: 95px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .bottle {
+
+        width: 145px;
+
+        height: 270px;
+    }
+
+    .question-potion {
+
+        width: 75px;
+    }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1200px) {
+
+    .game-container {
+
+        padding-top: 5px;
+    }
+
+    .bottle {
+
+        width: 160px;
+
+        height: 290px;
+    }
+}

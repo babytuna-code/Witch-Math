@@ -59,9 +59,9 @@ function goTochap3() {
     window.location.href = "chap3.html";
 }
 
-function goToLevel1(){
-    window.location.href = "chap2/chap2.html";
+function goTochap2(){
+    window.location.href = "chap2.html";
 }
-function goToRatio1(){
+function goTochap1(){
     window.location.href = "chap1.html";
 }

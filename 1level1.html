@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ratio Witch - Ratio Level 1</title>
+
+    <link rel="stylesheet" href="1level1.css">
+</head>
+
+<body>
+
+    <!-- BACK / HOME -->
+    <button class="back-button" id="backButton">BACK</button>
+    <button class="home-button" id="homeButton">HOME</button>
+
+
+    <!-- HEADER -->
+    <header class="game-header">
+
+        <div class="game-title">
+            RATIO WITCH
+        </div>
+
+        <div class="level-title">
+            LEVEL 1
+        </div>
+
+        <div class="score-title">
+            SCORE <span id="score">0</span>/5
+        </div>
+
+    </header>
+
+
+    <!-- QUESTION -->
+    <main class="game-container">
+
+        <section class="question-section">
+
+            <img
+                src="pics/potion1.svg"
+                alt="Ratio Potion"
+                class="question-potion"
+            >
+
+            <div class="question-box">
+
+                <p class="witch-title">
+                     WITCH SAYS . . . 
+                </p>
+
+                <h1 id="question">
+                    Loading...
+                </h1>
+
+            </div>
+
+        </section>
+
+
+        <!-- POTION GAME -->
+        <section class="potion-game">
+
+            <div class="potion-area">
+
+                <!-- POTION BOTTLE -->
+                <div class="bottle">
+
+                    <div
+                        class="liquid"
+                        id="liquid"
+                    ></div>
+
+                    <div class="bottle-mark mark-100">
+                        100%
+                    </div>
+
+                    <div class="bottle-mark mark-75">
+                        75%
+                    </div>
+
+                    <div class="bottle-mark mark-50">
+                        50%
+                    </div>
+
+                    <div class="bottle-mark mark-25">
+                        25%
+                    </div>
+
+                    <div class="bottle-mark mark-0">
+                        0%
+                    </div>
+
+                </div>
+
+
+                <!-- CURRENT VALUE -->
+                <div class="current-value">
+
+                    <span id="currentValue">
+                        0
+                    </span>
+
+                    <span id="unit">
+                        mL
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD BUTTONS -->
+            <div class="add-buttons">
+
+                <button class="add-button" 
+                data-value="1" > 
+                +1 
+            </button>
+
+                <button
+                    class="add-button"
+                    data-value="5"
+                >
+                    +5
+                </button>
+
+                <button
+                    class="add-button"
+                    data-value="10"
+                >
+                    +10
+                </button>
+
+                <button
+                    class="add-button"
+                    data-value="20"
+                >
+                    +20
+                </button>
+
+                <button
+                    class="add-button"
+                    data-value="50"
+                >
+                    +50
+                </button>
+
+            </div>
+
+
+            <!-- RESET / CHECK -->
+            <div class="control-buttons">
+
+                <button
+                    class="reset-button"
+                    id="resetButton"
+                >
+                    RESET
+                </button>
+
+                <button
+                    class="check-button"
+                    id="checkButton"
+                >
+                    CHECK
+                </button>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+            <p
+                class="message"
+                id="message"
+            ></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- COMPLETE POPUP -->
+    <div
+        class="complete-overlay hidden"
+        id="completeOverlay"
+    >
+
+        <div class="complete-box">
+
+            <h2>
+                LEVEL COMPLETE!
+            </h2>
+
+            <p>
+                You brewed all the potions!
+            </p>
+
+            <div class="final-score">
+                SCORE:
+                <span id="finalScore">0</span>/5
+            </div>
+
+
+            <div class="complete-buttons">
+
+                <button
+                    class="again-button"
+                    id="againButton"
+                >
+                    AGAIN
+                </button>
+
+                <button
+                    class="continue-button"
+                    id="continueButton"
+                >
+                    NEXT LEVEL
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="1level1.js"></script>
+
+</body>
+</html>
