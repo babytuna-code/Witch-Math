@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ratio Witch - Level 1</title>
+
+    <link
+        rel="stylesheet"
+        href="level1.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         BACK / HOME
+    =============================== -->
+
+    <button
+        class="back-button"
+        onclick="goBack()"
+    >
+        BACK
+    </button>
+
+    <button
+        class="home-button"
+        onclick="goHome()"
+    >
+        HOME
+    </button>
+
+
+    <!-- ==============================
+         GAME HEADER
+    =============================== -->
+
+    <header class="game-header">
+
+        <div class="level-info">
+
+            <span class="game-title">
+                 WITCH MATH
+            </span>
+
+            <span class="level-title">
+                LEVEL 1
+            </span>
+
+        </div>
+
+
+        <div class="score-box">
+
+            SCORE:
+            <span id="score">0</span>
+
+            /
+            5
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         GAME AREA
+    =============================== -->
+
+    <main class="game-container">
+
+
+        <!-- TITLE -->
+
+        <section class="question-header">
+
+            <img
+                src="pics/potion1.svg"
+                alt="Potion"
+                class="mini-potion"
+            >
+
+            <div>
+
+                <h1>
+                    MATCH THE RATIO
+                </h1>
+
+                <p>
+                    Drag a line to match equivalent ratios
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             MATCHING BOARD
+        =============================== -->
+
+        <section
+            class="matching-board"
+            id="matchingBoard"
+        >
+
+
+            <!-- SVG สำหรับวาดเส้น -->
+
+            <svg
+                id="connectionLayer"
+                class="connection-layer"
+            >
+            </svg>
+
+
+            <!-- ==========================
+                 LEFT SIDE
+            =========================== -->
+
+            <div
+                class="ratio-column left-column"
+                id="leftColumn"
+            >
+
+                <!-- JavaScript จะสร้างโจทย์ -->
+
+            </div>
+
+
+            <!-- ==========================
+                 RIGHT SIDE
+            =========================== -->
+
+            <div
+                class="ratio-column right-column"
+                id="rightColumn"
+            >
+
+                <!-- JavaScript จะสร้างคำตอบ -->
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==============================
+             MESSAGE
+        =============================== -->
+
+        <div
+            class="message"
+            id="message"
+        >
+            Drag each ratio to its matching answer!
+        </div>
+
+
+        <!-- ==============================
+             CONTROLS
+        =============================== -->
+
+        <div class="control-area">
+
+            <button
+                class="reset-button"
+                id="resetButton"
+            >
+                RESET
+            </button>
+
+            <button
+                class="next-button hidden"
+                id="nextButton"
+            >
+                NEXT LEVEL
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ==============================
+         COMPLETE POPUP
+    =============================== -->
+
+    <div
+        class="complete-overlay hidden"
+        id="completeOverlay"
+    >
+
+        <div class="complete-box">
+
+            <img
+                src="pics/potion1.svg"
+                alt="Potion"
+                class="complete-potion"
+            >
+
+            <h2>
+                LEVEL COMPLETE!
+            </h2>
+
+            <p>
+                Great job, Witch!
+            </p>
+
+            <div class="final-score">
+
+                SCORE
+                <strong id="finalScore">
+                    0
+                </strong>
+                / 5
+
+            </div>
+
+            <div class="complete-buttons">
+
+    <button
+        id="againButton"
+        class="again-button"
+    >
+        AGAIN
+    </button>
+
+    <button
+        id="continueButton"
+        class="continue-button"
+    >
+        NEXT LEVEL
+    </button>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+    <script src="level1.js"></script>
+
+</body>
+
+</html>
+```

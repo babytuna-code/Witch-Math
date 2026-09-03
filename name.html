@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Name</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ปุ่ม back -->
+    <button class="back-button" onclick="goBack()"> 
+        BACK 
+    </button>
+
+    <!-- ปุ่ม Home -->
+    <button class="home-button" onclick="goHome()">
+        HOME
+    </button>
+
+    <!-- NAME PAGE -->
+    <div class="name-page">
+
+        <!-- Witch Hat -->
+        <div class="hat-container">
+
+            <img
+                src="pics/hat.svg"
+                alt="hat"
+                class="hat"
+            >
+
+        </div>
+
+
+        <div class="page-container">
+
+            <h1>USERNAME</h1>
+
+            <input
+            type="text"
+            id="playerName"
+            placeholder="Enter your name"
+            >
+
+            <button class="enter-button" onclick="enterName()">
+                ENTER
+            </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

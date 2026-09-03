@@ -1,0 +1,705 @@
+
+/* ========================================
+   RATIO WITCH - ROAD MAP
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF8F0;
+    color: #4B3F55;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   BACK / HOME
+======================================== */
+
+.home-button,
+.back-button {
+    position: fixed;
+    top: clamp(12px, 2vh, 22px);
+
+    width: clamp(60px, 7vw, 100px);
+    min-height: clamp(32px, 4vw, 46px);
+
+    padding: 6px 10px;
+
+    border: none;
+    border-radius: clamp(8px, 1vw, 12px);
+
+    background-color: #D8CCF0;
+    color: #4B3F55;
+
+    font-size: clamp(10px, 1.2vw, 15px);
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 100;
+
+    transition: transform 0.2s ease;
+}
+
+.home-button {
+    right: clamp(10px, 2vw, 30px);
+}
+
+.back-button {
+    left: clamp(10px, 2vw, 30px);
+}
+
+.home-button:hover,
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.roadmap-header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding-top: clamp(70px, 8vh, 90px);
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ========================================
+   HAT
+======================================== */
+
+.roadmap-hat {
+    display: block;
+
+    width: clamp(70px, 10vw, 130px);
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: clamp(8px, 1.5vh, 15px);
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.roadmap-header h1 {
+    font-size: clamp(24px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    letter-spacing: clamp(1px, 0.2vw, 4px);
+
+    margin-bottom: 8px;
+}
+
+.roadmap-header p {
+    font-size: clamp(13px, 1.5vw, 18px);
+
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   ROAD MAP
+======================================== */
+
+.roadmap-wrapper {
+    position: relative;
+
+    width: min(90vw, 600px);
+
+    height: 1100px;
+
+    margin: 20px auto 50px;
+}
+
+
+/* ========================================
+   CURVED LINE
+======================================== */
+
+.roadmap-line {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   LEVEL
+======================================== */
+
+.level {
+    position: absolute;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ========================================
+   POTION
+======================================== */
+
+.potion-button {
+    width: clamp(75px, 13vw, 105px);
+    height: clamp(75px, 13vw, 105px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.potion-button img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.potion-button:hover {
+    transform: scale(1.12);
+
+    filter: drop-shadow(
+        0 5px 10px rgba(75, 63, 85, 0.15)
+    );
+}
+
+.potion-button:active {
+    transform: scale(0.96);
+}
+
+
+/* ========================================
+   NUMBER
+======================================== */
+
+.level span {
+    margin-top: 4px;
+
+    min-width: 28px;
+    height: 28px;
+
+    padding: 4px 7px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #D8CCF0;
+
+    color: #4B3F55;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   LEVEL POSITION
+======================================== */
+
+
+/* 1 */
+
+.level-1 {
+    left: 50%;
+    top: 10px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 2 */
+
+.level-2 {
+    left: 30%;
+    top: 130px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 3 */
+
+.level-3 {
+    left: 70%;
+    top: 245px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 4 */
+
+.level-4 {
+    left: 30%;
+    top: 365px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 5 */
+
+.level-5 {
+    left: 50%;
+    top: 465px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 6 */
+
+.level-6 {
+    left: 70%;
+    top: 565px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 7 */
+
+.level-7 {
+    left: 30%;
+    top: 675px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 8 */
+
+.level-8 {
+    left: 70%;
+    top: 775px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 9 */
+
+.level-9 {
+    left: 50%;
+    top: 875px;
+
+    transform: translateX(-50%);
+}
+
+
+/* 10 */
+
+.level-10 {
+    left: 30%;
+    top: 980px;
+
+    transform: translateX(-50%);
+}
+
+
+/* ========================================
+   MOBILE
+   390 × 844
+======================================== */
+
+@media (max-width: 767px) {
+
+    .roadmap-header {
+        padding-top: 65px;
+    }
+
+    .roadmap-hat {
+        width: 85px;
+    }
+
+    .roadmap-header h1 {
+        font-size: 25px;
+    }
+
+    .roadmap-header p {
+        font-size: 13px;
+    }
+
+    .roadmap-wrapper {
+        width: min(94vw, 430px);
+
+        height: 1050px;
+
+        margin-top: 15px;
+    }
+
+    .potion-button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .level span {
+        width: 24px;
+        min-width: 24px;
+
+        height: 24px;
+
+        font-size: 11px;
+    }
+
+
+    /* 1 */
+
+    .level-1 {
+        top: 10px;
+        left: 50%;
+    }
+
+
+    /* 2 */
+
+    .level-2 {
+        top: 120px;
+        left: 25%;
+    }
+
+
+    /* 3 */
+
+    .level-3 {
+        top: 230px;
+        left: 75%;
+    }
+
+
+    /* 4 */
+
+    .level-4 {
+        top: 340px;
+        left: 25%;
+    }
+
+
+    /* 5 */
+
+    .level-5 {
+        top: 440px;
+        left: 50%;
+    }
+
+
+    /* 6 */
+
+    .level-6 {
+        top: 540px;
+        left: 75%;
+    }
+
+
+    /* 7 */
+
+    .level-7 {
+        top: 650px;
+        left: 25%;
+    }
+
+
+    /* 8 */
+
+    .level-8 {
+        top: 750px;
+        left: 75%;
+    }
+
+
+    /* 9 */
+
+    .level-9 {
+        top: 850px;
+        left: 50%;
+    }
+
+
+    /* 10 */
+
+    .level-10 {
+        top: 955px;
+        left: 25%;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 389px) {
+
+    .roadmap-header {
+        padding-top: 60px;
+    }
+
+    .roadmap-hat {
+        width: 70px;
+    }
+
+    .roadmap-header h1 {
+        font-size: 21px;
+    }
+
+    .roadmap-header p {
+        font-size: 12px;
+    }
+
+    .roadmap-wrapper {
+        width: 96vw;
+        height: 1010px;
+    }
+
+    .potion-button {
+        width: 62px;
+        height: 62px;
+    }
+
+    .level span {
+        width: 21px;
+        min-width: 21px;
+        height: 21px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+   768 × 1024
+======================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .roadmap-header {
+        padding-top: 70px;
+    }
+
+    .roadmap-hat {
+        width: 100px;
+    }
+
+    .roadmap-header h1 {
+        font-size: 36px;
+    }
+
+    .roadmap-header p {
+        font-size: 15px;
+    }
+
+    .roadmap-wrapper {
+        width: 520px;
+        height: 1050px;
+    }
+
+    .potion-button {
+        width: 88px;
+        height: 88px;
+    }
+
+
+    .level-1 {
+        top: 10px;
+        left: 50%;
+    }
+
+    .level-2 {
+        top: 120px;
+        left: 26%;
+    }
+
+    .level-3 {
+        top: 235px;
+        left: 74%;
+    }
+
+    .level-4 {
+        top: 345px;
+        left: 26%;
+    }
+
+    .level-5 {
+        top: 445px;
+        left: 50%;
+    }
+
+    .level-6 {
+        top: 545px;
+        left: 74%;
+    }
+
+    .level-7 {
+        top: 650px;
+        left: 26%;
+    }
+
+    .level-8 {
+        top: 750px;
+        left: 74%;
+    }
+
+    .level-9 {
+        top: 850px;
+        left: 50%;
+    }
+
+    .level-10 {
+        top: 955px;
+        left: 26%;
+    }
+
+}
+
+
+/* ========================================
+   DESKTOP
+   1440 × 900
+======================================== */
+
+@media (min-width: 1200px) {
+
+    .roadmap-header {
+        padding-top: 70px;
+    }
+
+    .roadmap-hat {
+        width: 100px;
+    }
+
+    .roadmap-header h1 {
+        font-size: 42px;
+    }
+
+    .roadmap-header p {
+        font-size: 16px;
+    }
+
+    .roadmap-wrapper {
+        width: 560px;
+        height: 1050px;
+
+        margin-top: 15px;
+    }
+
+    .potion-button {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .level-1 {
+        top: 10px;
+        left: 50%;
+    }
+
+    .level-2 {
+        top: 120px;
+        left: 26%;
+    }
+
+    .level-3 {
+        top: 235px;
+        left: 74%;
+    }
+
+    .level-4 {
+        top: 345px;
+        left: 26%;
+    }
+
+    .level-5 {
+        top: 445px;
+        left: 50%;
+    }
+
+    .level-6 {
+        top: 545px;
+        left: 74%;
+    }
+
+    .level-7 {
+        top: 650px;
+        left: 26%;
+    }
+
+    .level-8 {
+        top: 750px;
+        left: 74%;
+    }
+
+    .level-9 {
+        top: 850px;
+        left: 50%;
+    }
+
+    .level-10 {
+        top: 955px;
+        left: 26%;
+    }
+
+}

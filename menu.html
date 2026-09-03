@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Level</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ปุ่ม back -->
+    <button class="back-button" onclick="goBack()"> 
+        BACK 
+    </button>
+    
+    <!-- ปุ่ม Home -->
+    <button class="home-button" onclick="goHome()">
+        HOME
+    </button>
+
+    <div class="menu-page">
+
+        <h1 class="menu-title">CHOOSE YOUR POTION</h1>
+        
+        <!-- potion bottle --> 
+
+        <div class="menu-container">
+
+            <div class="potion-item">
+                <button class="potion-button" onclick="goTochap1()">
+                    <img src="pics/potion1.svg" alt="Potion 1">
+                </button>
+                <h2>POTION I</h2>
+                <p>Ratio</p>
+            </div>
+
+            <div class="potion-item">
+                <button class="potion-button" onclick="goTochap2()">
+                    <img src="pics/potion2.svg" alt="Potion 2">
+                </button>
+                <h2>POTION II</h2>
+                <p>Proportion</p>
+            </div>
+
+            <div class="potion-item">
+                <button class="potion-button" onclick="goTochap3()">
+                    <img src="pics/potion3.svg" alt="Potion 3">
+                </button>
+                <h2>POTION III</h2>
+                <p>Percentage</p>
+            </div>
+
+         </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

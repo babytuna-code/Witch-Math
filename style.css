@@ -1,0 +1,558 @@
+/* =========================================================
+   RATIO WITCH
+   RESPONSIVE DESIGN SYSTEM
+
+   Mobile  : 390 × 844
+   Tablet  : 1024 × 768
+   Computer: 1440 × 900
+ */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF8F0;
+    color: #4B3F55;
+
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+
+
+/*  HOME PAGE */
+
+.home-container {
+
+    width: 100%;
+
+    min-height: 100dvh;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        clamp(60px, 10vh, 100px)
+        clamp(15px, 5vw, 60px)
+        40px;
+
+    overflow: hidden;
+}
+
+
+/* คำอธิบาย */
+
+.game-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ghost-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ghost {
+    width: clamp(70px, 15vw, 200px);
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* PLAY BUTTON */
+
+.play-button {
+    width: clamp(140px, 16vw, 220px);
+    min-height: clamp(50px, 5vw, 70px);
+
+    padding: 10px 20px;
+
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: bold;
+
+    border: none;
+    border-radius: clamp(12px, 1.5vw, 20px);
+
+    background-color: #D8CCF0;
+    color: #4B3F55;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* name page */
+
+.name-page {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding:
+        clamp(70px, 10vh, 100px)
+        20px
+        30px;
+    overflow: hidden;
+
+}
+
+.hat-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hat {
+    display: block;
+    width: clamp(90px, 15vw, 180px);
+    height: auto;
+    object-fit: contain;
+    margin-bottom: clamp(20px, 4vh, 40px);
+}
+
+.name-page .page-container {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.name-page .page-container h1 {
+    font-size: clamp(28px, 4.5vw, 58px);
+    line-height: 1.1;
+    letter-spacing: clamp(1px, 0.2vw, 4px);
+    margin: 0 0 clamp(20px, 4vh, 35px);
+}
+
+/* INPUT USERNAME */
+
+#playerName {
+    width: min(80vw, 350px);
+    min-height: clamp(42px, 5vw, 55px);
+    padding:
+        clamp(10px, 1.5vw, 15px)
+        clamp(12px, 2vw, 18px);
+    font-size: clamp(15px, 1.7vw, 20px);
+    border: 2px solid #D8CCF0;
+    border-radius: clamp(8px, 1vw, 12px);
+    outline: none;
+    margin: 0;
+    color: #4B3F55;
+    background-color: #FFFFFF;
+}
+
+#playerName:focus {
+    border-color: #A995D5;
+}
+
+/* enter button */
+
+.enter-button {
+    display: block;
+    width: clamp(110px, 14vw, 170px);
+    min-height: clamp(42px, 5vw, 58px);
+    margin-top: clamp(20px, 3vh, 30px);
+    padding: 8px 20px;
+    font-size: clamp(16px, 1.7vw, 22px);
+    font-weight: bold;
+    border: none;
+    border-radius: clamp(8px, 1vw, 12px);
+    background-color: #D8CCF0;
+    color: #4B3F55;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.enter-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* home button */
+
+.home-button,
+.back-button {
+    position: fixed;
+    top: clamp(12px, 2vh, 22px);
+    width: clamp(60px, 7vw, 100px);
+    min-height: clamp(32px, 4vw, 46px);
+    padding: 6px 10px;
+    border: none;
+    border-radius: clamp(8px, 1vw, 12px);
+    background-color: #D8CCF0;
+    color: #4B3F55;
+    font-size: clamp(10px, 1.2vw, 15px);
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.home-button {
+    right: clamp(10px, 2vw, 30px);
+}
+
+
+.back-button {
+    left: clamp(10px, 2vw, 30px);
+}
+
+
+.home-button:hover,
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+.menu-page {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(90px, 11vh, 120px)
+             clamp(15px, 4vw, 50px)
+             30px;
+    overflow-x: hidden;
+}
+
+
+/*  menu title */
+
+.menu-title {
+    font-size: clamp(28px, 4.5vw, 58px);
+    line-height: 1.1;
+    letter-spacing: clamp(1px, 0.2vw, 4px);
+    margin: 0 0 clamp(8px, 1.5vh, 15px);
+}
+
+
+/* POTION CONTAINER: */
+
+.menu-container {
+     width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(10px, 5vw, 70px);
+    margin-top: clamp(20px, 4vh, 40px);
+    /* สำคัญ: ให้ 3 ขวดอยู่แถวเดียว */
+    flex-wrap: wrap;
+}
+
+
+/* POTION ITEM */
+
+.potion-item {
+   width: 100%;
+    max-width: 220px;
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+}
+
+.potion-button {
+    width: 100%;
+    aspect-ratio: 0.82;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+        transform 0.2s ease;
+}
+
+.potion-button img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.potion-button:hover {
+    transform:
+        translateY(-10px)
+        scale(1.05);
+}
+
+.potion-button:active {
+    transform:
+        translateY(-5px)
+        scale(0.98);
+}
+
+/* POTION TEXT */
+
+.potion-item h2 {
+    font-size: clamp(11px, 1.7vw, 22px);
+    line-height: 1.2;
+    margin-top: clamp(5px, 1.2vw, 15px);
+    margin-bottom: clamp(3px, 0.5vw, 7px);
+}
+
+
+
+.potion-item p {
+    font-size: clamp(10px, 1.4vw, 18px);
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* MOBILE
+   Design Reference: 390 × 844 */
+
+@media (max-width: 767px) {
+    .home-container {
+        padding:
+            60px
+            15px
+            30px;
+    }
+
+    .ghost {
+        width: 120px;
+        margin-bottom: 30px;
+    }
+
+
+    .play-button {
+        width: 160px;
+        min-height: 50px;
+        font-size: 18px;
+        border-radius: 14px;
+    }
+
+    .name-page {
+        padding-top: 70px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .hat {
+        width: 120px;
+        margin-bottom: 25px;
+    }
+
+
+    .name-page .page-container h1 {
+        font-size: clamp(25px, 8vw, 38px);
+        margin-bottom: 22px;
+    }}
+
+
+    #playerName {
+        width: min(80vw, 320px);
+        min-height: 45px;
+        font-size: 16px;
+    }
+
+
+    .enter-button {
+        width: 120px;
+        min-height: 45px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .menu-page {
+        padding-top: 85px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .menu-title {
+        font-size: clamp(25px, 8vw, 38px);
+    }
+
+    .menu-container {
+        gap: 3px;
+
+        margin-top: 20px;
+    }
+
+    .potion-item {
+        max-width: 110px;
+    }
+
+    .potion-button {
+        width: 100%;
+        aspect-ratio: 0.82;
+    }
+
+    .potion-button img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .potion-item h2 {
+        font-size: clamp(9px, 3vw, 15px);
+        margin-top: 7px;
+    }
+
+    .potion-item p {
+        font-size: clamp(8px, 2.7vw, 13px);
+    }
+
+
+/* TABLET
+   Design Reference: 1024 × 768 */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .home-container {
+        padding:
+            70px
+            30px
+            30px;
+    }
+
+
+    .ghost {
+        width: 140px;
+        margin-bottom: 35px;
+    }
+
+
+    .play-button {
+        width: 180px;
+        min-height: 55px;
+        font-size: 20px;
+    }
+
+    .hat {
+        width: 140px;
+        margin-bottom: 30px;
+    }
+
+
+    .name-page .page-container h1 {
+        font-size: 48px;
+    }
+
+
+
+    #playerName {
+        width: 350px;
+    }
+
+
+    .menu-page {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .menu-container {
+        gap: clamp(20px, 5vw, 50px);
+    }
+
+    .potion-item {
+        max-width: 180px;
+    }
+}
+
+
+/*  COMPUTER
+   Design Reference: 1440 × 900*/
+
+@media (min-width: 1200px) {
+
+    .home-container {
+        padding:
+            80px
+            40px
+            40px;
+    }
+
+    .ghost {
+        width: 160px;
+        margin-bottom: 40px;
+    }
+
+    .play-button {
+        width: 200px;
+        min-height: 60px;
+        font-size: 22px;
+    }
+
+    .hat {
+        width: 160px;
+        margin-bottom: 35px;
+    }
+
+    .name-page .page-container h1 {
+        font-size: 58px;
+    }
+
+    #playerName {
+        width: 350px;
+    }
+
+    .enter-button {
+        width: 170px;
+        min-height: 58px;
+        font-size: 22px;
+    }
+
+    .menu-page {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .menu-container {
+        gap: clamp(40px, 5vw, 70px);
+    }
+
+    .potion-item {
+        max-width: 220px;
+    }
+}
