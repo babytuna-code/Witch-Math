@@ -39,21 +39,6 @@ function goBack() {
     window.history.back();
 }
 
-/*หน้าเลือก chapter ไป หน้า 4 */
-
-function goTochap1() {
-    window.location.href = "chap1.html";
-}
-
-
-/* หน้าเลือก chapter ไป หน้า 5 */
-
-function goTochap2() {
-    window.location.href = "chap2.html";
-}
-
-
-/* หน้าเลือก chapter ไป หน้า 6 */
 
 function goTochap3() {
     window.location.href = "chap3.html";

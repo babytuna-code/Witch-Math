@@ -4,178 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island 3</title>
 
-    <title> Witch - Road Map</title>
-
-    <link rel="stylesheet" href="roadmap1.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- ปุ่ม back -->
+    <button class="back-button" onclick="goBack()"> 
+        BACK 
+    </button>
 
-    <!-- BACK / HOME -->
-    <button class="back-button" onclick="goBack()">BACK</button>
-    <button class="home-button" onclick="goHome()">HOME</button>
+    <!-- ปุ่ม Home -->
+    <button class="home-button" onclick="goHome()">
+        HOME
+    </button>
 
+    <div class="chap3-page">
 
-    <!-- HEADER -->
-    <header class="roadmap-header">
+        <h1>CHAPTER 3</h1>
 
-        <img
-            src="pics/hat.svg"
-            alt="Witch Hat"
-            class="roadmap-hat"
-        >
+        <p>Percentage </p>
 
-        <h1>WITCH MAP</h1>
+        <h2>Coming Soon...</h2>
 
-        <p>Choose your level</p>
+    </div>
 
-    </header>
-
-
-    <!-- ROAD MAP -->
-    <main class="roadmap-wrapper">
-
-        <!-- เส้นทาง 1 ไป 10 -->
-        <svg
-            class="roadmap-line"
-            viewBox="0 0 600 1100"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-        >
-
-            <path
-                d="
-                M300 55
-
-                C190 90, 150 130, 190 175
-                C230 220, 410 230, 410 275
-                C410 320, 230 330, 190 375
-                C150 420, 230 450, 300 475
-                C370 500, 450 530, 410 575
-                C370 620, 190 630, 190 680
-                C190 730, 370 740, 410 785
-                C450 830, 370 860, 300 885
-                C230 910, 150 940, 190 985
-                C230 1030, 300 1045, 300 1070
-                "
-                fill="none"
-                stroke="#D8CCF0"
-                stroke-width="12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
-
-        </svg>
-
-
-        <!-- LEVEL 1 -->
-        <div class="level level1-1">
-            <button class="potion-button" onclick="goToRatio(1)">
-                <img src="pics/potion1.svg" alt="Level 1">
-            </button>
-            <span>1</span>
-        </div>
-
-
-        <!-- LEVEL 2 -->
-        <div class="level level1-2">
-            <button class="potion-button" onclick="goToRatio(2)">
-                <img src="pics/potion1.svg" alt="Level 2">
-            </button>
-            <span>2</span>
-        </div>
-
-
-        <!-- LEVEL 3 -->
-        <div class="level level1-3">
-            <button class="potion-button" onclick="goToRatio(3)">
-                <img src="pics/potion1.svg" alt="Level 3">
-            </button>
-            <span>3</span>
-        </div>
-
-
-        <!-- LEVEL 4 -->
-        <div class="level level1-4">
-            <button class="potion-button" onclick="goToRatio(4)">
-                <img src="pics/potion1.svg" alt="Level 4">
-            </button>
-            <span>4</span>
-        </div>
-
-
-        <!-- LEVEL 5 -->
-        <div class="level level1-5">
-            <button class="potion-button" onclick="goToRatio(5)">
-                <img src="pics/potion1.svg" alt="Level 5">
-            </button>
-            <span>5</span>
-        </div>
-
-
-        <!-- LEVEL 6 -->
-        <div class="level level1-6">
-            <button class="potion-button" onclick="goToRatio(6)">
-                <img src="pics/potion1.svg" alt="Level 6">
-            </button>
-            <span>6</span>
-        </div>
-
-
-        <!-- LEVEL 7 -->
-        <div class="level level1-7">
-            <button class="potion-button" onclick="goToRatio(7)">
-                <img src="pics/potion1.svg" alt="Level 7">
-            </button>
-            <span>7</span>
-        </div>
-
-
-        <!-- LEVEL 8 -->
-        <div class="level level1-8">
-            <button class="potion-button" onclick="goToRatio(8)">
-                <img src="pics/potion1.svg" alt="Level 8">
-            </button>
-            <span>8</span>
-        </div>
-
-
-        <!-- LEVEL 9 -->
-        <div class="level level1-9">
-            <button class="potion-button" onclick="goToRatio(9)">
-                <img src="pics/potion1.svg" alt="Level 9">
-            </button>
-            <span>9</span>
-        </div>
-
-
-        <!-- LEVEL 10 -->
-        <div class="level level1-10">
-            <button class="potion-button" onclick="goToRatio(10)">
-                <img src="pics/potion1.svg" alt="Level 10">
-            </button>
-            <span>10</span>
-        </div>
-
-    </main>
-
-
-    <script>
-
-        function goToRatio(level) {
-            window.location.href = "1level" + level + ".html";
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-
-        function goHome() {
-            window.location.href = "index.html";
-        }
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
