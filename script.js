@@ -60,5 +60,8 @@ function goTochap3() {
 }
 
 function goToLevel1(){
-    window.location.href = "chap2.html";
+    window.location.href = "chap2/chap2.html";
+}
+function goToRatio1(){
+    window.location.href = "chap1.html";
 }
